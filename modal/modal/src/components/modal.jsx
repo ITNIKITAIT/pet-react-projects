@@ -7,12 +7,10 @@ export default function Modal() {
     return (
         <div className={styles.modal}>
             <button onClick={() => setOpen(true)} className={styles.btnModal}>Modal window</button>
-            {open && (
-                <div className={styles.overlay}>
-                    <div className={styles.overlay_description}>Open nice
-                    <button onClick={() => setOpen(false)} className={styles.btnClose}>Close</button></div>
-                </div>
-            )}
+            <div className={`${styles.overlay} ${open && styles.show}`}>
+                <div className={`${styles.overlay_description} ${open && styles.show}`}>Open nice
+                <button onClick={() => setOpen(false)} className={styles.btnClose}>Close</button></div>
+            </div>
         </div>
     )
 }
