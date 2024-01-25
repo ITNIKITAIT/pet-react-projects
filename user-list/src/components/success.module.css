@@ -1,0 +1,33 @@
+.success_block {
+    width: 400px;
+    min-height: 500px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.success_block img {
+    width: 150px;
+    display: block;
+}
+.success_block button {
+    display: block;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff7700;
+    color: #fff;
+    padding: 10px;
+    min-width: 200px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.success_block button:hover {
+    background-color: #ff7700cd;
+}

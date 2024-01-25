@@ -1,0 +1,26 @@
+.user {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.user img {
+    margin-right: 10px;
+}
+
+.user button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #b5b3b3;
+    font-size: 40px;
+    background-color: transparent;
+}
+
+.user button:hover {
+    color: #888787;;
+}
