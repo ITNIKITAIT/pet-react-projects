@@ -1,0 +1,48 @@
+.block {
+    max-width: 300px;
+}
+
+.currency_list {
+    display: flex;
+    border: 1px solid #c2c2c2; 
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.currency_list li {
+    border-right: 1px solid #c2c2c2;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.currency_list li:last-child {
+    border-right: none
+}
+
+.currency_list li:hover {
+    background-color: #e9e9e9;
+    color: black;
+}
+
+.currency_list .current:hover {
+    background-color: #39c47f;
+    color: #fff;
+}
+
+.input {
+    font-size: 30px;
+    color: black;
+    padding: 15px 10px;
+    border-right: 1px solid #c2c2c2;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: black;
+}
+
+.current {
+    background-color: #39c47f;
+    color: #fff;
+}

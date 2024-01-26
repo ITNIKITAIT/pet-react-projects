@@ -7,9 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: #812ae56c;
+  background-color: #e0d6ec6c;
 }
 
 code {
@@ -39,4 +38,12 @@ ul {
   ul {
     list-style: none;
     padding-left: 0;
+  }
+
+  .App {
+    margin-top: 100px;
+    background-color: #fff;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
   }
