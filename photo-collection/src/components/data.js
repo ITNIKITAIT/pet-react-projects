@@ -1,15 +1,7 @@
-export const images = {
-    "categories": [
-      { "name": "Все" },
-      { "name": "Море" },
-      { "name": "Горы" },
-      { "name": "Архитектура" },
-      { "name": "Города" }
-    ],
-    "collections": [
+export const images = [
       {
         "category": 2,
-        "name": "Поход в горы",
+        "name": "Hiking in the mountains",
         "photos": [
           "https://images.unsplash.com/photo-1613310023042-ad79320c00ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bmF0aW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1612676239016-41e2c92b8e06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bmF0aW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
@@ -19,7 +11,7 @@ export const images = {
       },
       {
         "category": 1,
-        "name": "Море (июнь)",
+        "name": "Sea (June)",
         "photos": [
           "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHNlYSUyMGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1621335223658-0ebd89004d51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2VhJTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
@@ -29,7 +21,7 @@ export const images = {
       },
       {
         "category": 3,
-        "name": "Поездка в Европу",
+        "name": "Trip to Europe",
         "photos": [
           "https://images.unsplash.com/photo-1610010252747-afeb906e2d55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJjaGljdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1630335856915-3987afdfdc9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFyY2hpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -39,7 +31,7 @@ export const images = {
       },
       {
         "category": 3,
-        "name": "Идеальная архитектура",
+        "name": "Ideal architecture",
         "photos": [
           "https://images.unsplash.com/photo-1616578738046-8d6bbb4ee28e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGFyY2hpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1538378918848-29dbc0910082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXJjaGljdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -49,7 +41,7 @@ export const images = {
       },
       {
         "category": 3,
-        "name": "Красивые здания",
+        "name": "Beautiful buildings",
         "photos": [
           "https://images.unsplash.com/photo-1616578738046-8d6bbb4ee28e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGFyY2hpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1629774631753-88f827bf6447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGFyY2hpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -59,7 +51,7 @@ export const images = {
       },
       {
         "category": 4,
-        "name": "Путешествие по миру",
+        "name": "Travel the world",
         "photos": [
           "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1560840067-ddcaeb7831d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -69,7 +61,7 @@ export const images = {
       },
       {
         "category": 2,
-        "name": "Путешествие куда-то",
+        "name": "Traveling somewhere",
         "photos": [
           "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
           "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
@@ -78,4 +70,3 @@ export const images = {
         ]
       }
     ]
-  }

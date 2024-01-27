@@ -5,10 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
   background-color: #e0d6ec6c;
+  padding: 0 30px 30px 30px;
 }
 
 code {
@@ -108,4 +106,10 @@ ul {
 .pagination li.active {
     background-color: black;
     color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
