@@ -4,8 +4,8 @@ import Menu from "./components/Menu/Menu";
 function App() {
   return (
     <>
-      {/* <Game /> */}
-      <Menu />
+      <Game />
+      {/* <Menu /> */}
     </>
   );
 }
