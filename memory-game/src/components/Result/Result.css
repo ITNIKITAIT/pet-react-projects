@@ -1,0 +1,49 @@
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(60, 59, 59, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.result {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #c81b69;
+}
+
+.result img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.discription {
+    font-size: 28px;
+    color: #222222;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.btn-again {
+    border: none;
+    border-radius: 20px;
+    background-color: #e50b6d;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-again:hover {
+    background-color: #c81b69;
+}

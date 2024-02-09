@@ -71,7 +71,20 @@
 }
 
 .back {
+    display: block;
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
+    border: 1px solid black;
+    padding: 15px 35px;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.back:hover {
+    background-color: #eae8e8;
 }

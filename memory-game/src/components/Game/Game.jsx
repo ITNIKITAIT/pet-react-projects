@@ -1,22 +1,29 @@
 import { useEffect, useRef, useState } from 'react';
 import { images } from './data';
+import numberCardsFunc from '../helpers/numberCardsFunc.js'
+import dublicateFunc from '../helpers/dublicateArrayFunc.js';
 import './Game.css'
 
-const Game = () => {
+const Game = ({setTab, difficulty, setModal}) => {
+
+    const numberOfCards = (numberCardsFunc(difficulty))
+    const dublicatedImg = dublicateFunc(images, numberOfCards)
+
     // console.log('render')
     const [open, setOpen] = useState([])
 
     useEffect(() => {
-        const len = open.length
+        const len = open.length;
         if (len !== 0 && len % 2 === 0 ) {
-            if (cardsRef.current[open[len-1]].id !== cardsRef.current[open[len-2]].id) {
-                setTimeout(() => setOpen(open.slice(0, len-2)), 200)
+            const prevItem = len - 2
+            if (cardsRef.current[open[len-1]].id !== cardsRef.current[open[prevItem]].id) {
+                setTimeout(() => setOpen(open.slice(0, prevItem)), 200)
             }
         }
-        if (images.length === len) {
-            console.log('win')
+        if (cardsRef.current.length === len) {
+            setModal(true)
         }
-    }, [open])
+    }, [open, setTab, setModal])
 
     const cardClick = (i) => {
         if (!open.includes(i)) setOpen([...open, i]);
@@ -26,7 +33,7 @@ const Game = () => {
         return array.toSorted((a, b) => Math.random() - 0.5)
     }
 
-    const cardsRef = useRef(shuffle(images))
+    const cardsRef = useRef(shuffle(dublicatedImg))
 
     return ( 
         <div className="wrapper">
@@ -38,7 +45,7 @@ const Game = () => {
                 <li className="stats__item">moves</li>
                 <li className="stats__item">reload</li>
             </ul>
-            <ul className="board">
+            <ul className="board" style={{width: numberOfCards === 20 ? '870px' : ''}}>
                 {cardsRef.current.map((item, index) => {
                     return (<li key={index} 
                                 onClick={() => cardClick(index)} 
@@ -47,7 +54,7 @@ const Game = () => {
                             </li>)
                 })}
             </ul>
-            <p className="back">Back</p>
+            <button onClick={() => setTab('menu')} className="back">Back</button>
         </div>
      );
 }
