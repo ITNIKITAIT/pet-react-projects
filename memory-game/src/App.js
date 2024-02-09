@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       {tab === 'menu' && <Menu setTab={setTab} setDifficulty={setDifficulty} />}
-      {tab === 'game' && <Game setModal={setModal} setTab={setTab} difficulty={difficulty} />}
+      {tab === 'game' && <Game modal={modal} setModal={setModal} setTab={setTab} difficulty={difficulty} />}
       {modal && <Result setTab={setTab} setModal={setModal}/>}
     </>
   );

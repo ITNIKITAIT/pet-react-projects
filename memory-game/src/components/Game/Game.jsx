@@ -2,15 +2,19 @@ import { useEffect, useRef, useState } from 'react';
 import { images } from './data';
 import numberCardsFunc from '../helpers/numberCardsFunc.js'
 import dublicateFunc from '../helpers/dublicateArrayFunc.js';
+import useLocalStorage from '../hooks/UseLocalStorage.js';
 import './Game.css'
+import Timer from '../Timer/Timer.jsx';
 
-const Game = ({setTab, difficulty, setModal}) => {
-
+const Game = ({setTab, difficulty, setModal, modal}) => {
+    // console.log('render')
     const numberOfCards = (numberCardsFunc(difficulty))
     const dublicatedImg = dublicateFunc(images, numberOfCards)
 
-    // console.log('render')
     const [open, setOpen] = useState([])
+    const [move, setMove] = useState(0)
+    const [isMoved, setIsMoved] = useState(true)
+    const [wins, setWins] = useLocalStorage('Wins', 0)
 
     useEffect(() => {
         const len = open.length;
@@ -18,13 +22,25 @@ const Game = ({setTab, difficulty, setModal}) => {
             const prevItem = len - 2
             if (cardsRef.current[open[len-1]].id !== cardsRef.current[open[prevItem]].id) {
                 setTimeout(() => setOpen(open.slice(0, prevItem)), 200)
+                setIsMoved(false)
+            }
+            else {
+                setMove(prev => prev + 1);
             }
         }
+        if (!isMoved && len === 0) setMove(prev => prev + 1);
+
         if (cardsRef.current.length === len) {
+            setWins(wins + 1)
             setModal(true)
         }
-    }, [open, setTab, setModal])
+        // eslint-disable-next-line
+    }, [open, setTab, setModal, setWins])
 
+    useEffect(() => {
+
+    })
+    
     const cardClick = (i) => {
         if (!open.includes(i)) setOpen([...open, i]);
     }
@@ -38,12 +54,11 @@ const Game = ({setTab, difficulty, setModal}) => {
     return ( 
         <div className="wrapper">
             <p className="title">Matching Game</p>
-            <p className="wins">Win streak - 0🏆</p>
+            <p className="wins">Wins - {wins}🏆</p>
             <ul className="stats-list">
-                <li className="stats__item">Difficulty</li>
-                <li className="stats__item">time</li>
-                <li className="stats__item">moves</li>
-                <li className="stats__item">reload</li>
+                <li className="stats__item">{difficulty.toUpperCase()}</li>
+                <li className="stats__item"><Timer modal={modal}/></li>
+                <li className="stats__item">{move} Moves</li>
             </ul>
             <ul className="board" style={{width: numberOfCards === 20 ? '870px' : ''}}>
                 {cardsRef.current.map((item, index) => {
