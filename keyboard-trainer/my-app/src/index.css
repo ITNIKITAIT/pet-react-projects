@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -41,4 +45,10 @@ ul {
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+.keyboard {
+    display: grid;
+    width: 812px;
+    grid-template-columns: repeat(30, 21px);
 }
