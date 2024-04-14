@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import KeyButton from './KeyButton';
+import { context } from '../App';
 
 const Keyboard = () => {
+    const { color } = useContext(context);
+
     return (
-        <div className="keyboard mx-auto mt-10 w-fit bg-gray-200 p-1 gap-[6px]">
+        <div
+            style={{ backgroundColor: color }}
+            className="keyboard mx-auto mt-10 w-fit bg-gray-200 p-1 gap-[6px]">
             <KeyButton>`</KeyButton>
             <KeyButton>1</KeyButton>
             <KeyButton>2</KeyButton>
