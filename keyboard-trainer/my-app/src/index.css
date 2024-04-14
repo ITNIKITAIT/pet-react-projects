@@ -52,3 +52,13 @@ ul {
     width: 812px;
     grid-template-columns: repeat(30, 21px);
 }
+
+.btn-theme {
+    display: block;
+    cursor: pointer;
+    background-color: rgb(252, 191, 77);
+    border-radius: 20px;
+    border: 2px solid black;
+    min-width: 80px;
+    padding: 3px;
+}
