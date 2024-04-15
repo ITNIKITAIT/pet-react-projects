@@ -6,7 +6,7 @@ const Header = () => {
     const { color, setColor } = useContext(context);
 
     return (
-        <header className="py-2 border-b-2">
+        <header className="py-2 border-b-2 mb-[30px]">
             <div className="flex justify-between items-center max-w-[1200px] mx-auto">
                 <h2 className="text-[30px] bg-gradient-to-r from-violet-400 to-violet-600 text-transparent bg-clip-text font-semibold">
                     KeyboardTrainer

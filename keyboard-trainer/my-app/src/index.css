@@ -62,3 +62,14 @@ ul {
     min-width: 80px;
     padding: 3px;
 }
+
+.word-current {
+    @apply bg-slate-200 rounded-xl;
+}
+
+.word--incorrect {
+    color: red;
+}
+.word--correct {
+    color: green;
+}
