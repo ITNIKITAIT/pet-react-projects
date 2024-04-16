@@ -5,9 +5,9 @@ import { useTimer } from '../hooks/useTimer';
 const Field = () => {
     const [word, setWord] = useState('');
     const [printedWords, setPrintedWords] = useState([]);
-    const { time, setTime, start, clear } = useTimer(60);
+    const { time, start, stop } = useTimer(60);
 
-    const fieldRef = useRef(null);
+    const fieldRef = useRef();
     const { words } = useContext(context);
 
     useEffect(() => {
@@ -37,8 +37,7 @@ const Field = () => {
 
     const reload = () => {
         setWord('');
-        clear();
-        setTime(60);
+        stop();
     };
 
     return (

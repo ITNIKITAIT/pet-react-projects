@@ -6,7 +6,6 @@ export const useTimer = (defaultValue) => {
 
     const start = () => {
         interval.current = setInterval(() => {
-            console.log('tick');
             setTime((prev) => {
                 if (prev === 0) {
                     clearInterval(interval);
@@ -17,9 +16,10 @@ export const useTimer = (defaultValue) => {
         }, 1000);
     };
 
-    const clear = () => {
+    const stop = () => {
         clearInterval(interval.current);
+        setTime(defaultValue);
     };
 
-    return { time, setTime, start, clear };
+    return { time, start, stop };
 };
