@@ -10,7 +10,7 @@ function App() {
     const [words, setWords] = useState([]);
 
     useEffect(() => {
-        fetch('https://random-word-api.herokuapp.com/word?number=30')
+        fetch('https://random-word-api.herokuapp.com/word?number=100')
             .then((res) => res.json())
             .then((data) => setWords(data))
             .catch((err) => console.log(err));
