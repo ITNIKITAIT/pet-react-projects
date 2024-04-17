@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useTimer } from '../hooks/useTimer';
 import { context } from '../App';
 import Statistic from './Statistic';
@@ -17,6 +17,11 @@ const WriteSection = ({ setPrintedWords, printedWords }) => {
 
     const { doRequest, words } = useContext(context);
 
+    const result = useRef(getStatistic(words, printedWords));
+
+    if (time === 0) {
+        result.current = getStatistic(words, printedWords);
+    }
     const printWord = (e) => {
         if (time === 0) return;
         const newWord = e.target.value;
@@ -70,7 +75,7 @@ const WriteSection = ({ setPrintedWords, printedWords }) => {
             </div>
             {statisticIsVisible && (
                 <Statistic
-                    {...getStatistic(words, printedWords)}
+                    {...result.current}
                     record={value}
                     setRecord={setValue}
                 />
