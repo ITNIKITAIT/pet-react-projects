@@ -20,6 +20,20 @@ module.exports = {
                     },
                 },
             },
+            colors: {
+                primaryColor: 'var(--primary-color)',
+                timer: 'var(--timer)',
+            },
+            backgroundColor: {
+                primaryColor: 'var(--primary-bg-color)',
+                currWord: 'var(--curr-word)',
+                secondColor: 'var(--second-bg)',
+                keyButton: 'var(--reverse-bg)',
+                hoverKey: 'var(--hover-key)',
+            },
+            borderColor: {
+                primaryColor: 'var(--primary-border-color)',
+            },
         },
     },
     plugins: [],

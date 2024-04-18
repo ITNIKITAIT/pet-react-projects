@@ -27,14 +27,14 @@ const Field = () => {
                 <ReactLoading
                     className="m-auto mb-5"
                     type="spin"
-                    color={'black'}
+                    color={'var(--primary-color)'}
                     height={100}
                     width={100}
                 />
             ) : (
                 <div
                     ref={fieldRef}
-                    className="border-4 border-violet-400 rounded-md text-[26px] py-3 px-5 mb-5 leading-[58px] h-[150px] overflow-hidden w-full select-none">
+                    className="border-4 border-primaryColor rounded-md text-[26px] py-3 px-5 mb-5 leading-[58px] h-[150px] overflow-hidden w-full select-none text-primaryColor">
                     <div className="field--wrapper">
                         {words.map((word, i) => (
                             <div

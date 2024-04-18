@@ -17,7 +17,7 @@ const Statistic = ({
                 <li className="text-black text-[20px] flex justify-between items-center py-1 bg-gray-100 px-3 ">
                     Accuracy <span className="font-bold">{accurancy}%</span>
                 </li>
-                <li className="text-black text-[20px] flex justify-between items-center py-1  px-3 ">
+                <li className="text-black text-[20px] flex justify-between items-center py-1  px-3 bg-white">
                     Correct words{' '}
                     <span className="text-green-600">{correctWords}</span>
                 </li>
@@ -26,10 +26,10 @@ const Statistic = ({
                     <span className="text-red-600">{wrongWords}</span>
                 </li>
             </ul>
-            <h3 className="text-black text-[24px] font-medium text-center mt-3">
+            <h3 className="text-black text-[24px] font-medium text-center pt-3 bg-white">
                 Your last record
             </h3>
-            <h4 className="text-black text-[28px] font-bold text-center mb-3">
+            <h4 className="text-black text-[28px] font-bold text-center pb-3 bg-white">
                 {record} WPM
             </h4>
         </div>

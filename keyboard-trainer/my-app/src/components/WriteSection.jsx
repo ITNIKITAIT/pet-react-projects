@@ -50,9 +50,9 @@ const WriteSection = ({ setPrintedWords, printedWords }) => {
                     value={word}
                     onChange={printWord}
                     type="text"
-                    className="border-2 border-slate-500 py-2 px-5 text-[24px] rounded-md focus:border-violet-400 outline-none w-full"
+                    className="border-2 border-primaryColor bg-primaryColor text-primaryColor py-2 px-5 text-[24px] rounded-md focus:border-violet-400 outline-none w-full"
                 />
-                <div className="text-[18px] text-violet-500 bg-[#E5E7EB] py-2 text-center w-[80px] rounded-lg font-medium">
+                <div className="text-[18px] text-timer bg-secondColor py-2 text-center w-[80px] rounded-lg font-medium border-[#e5e7eb] border-[1px]">
                     0:
                     {time < 10 && '0'}
                     {time}

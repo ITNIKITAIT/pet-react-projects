@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg-button: rgb(252, 191, 77);
+    --border-color: black;
+    --primary-color: black;
+    --primary-bg-color: #fff;
+    --primary-border-color: #a78bfa;
+    --curr-word: #e2e8f0;
+    --timer: #8b5cf6;
+    --second-bg: #e5e7eb;
+    --reverse-bg: #fff;
+    --hover-key: #f1f5f9;
+}
+
+.dark {
+    --bg-button: rgb(63, 63, 63);
+    --border-color: #fff;
+    --primary-color: #fff;
+    --primary-bg-color: rgba(34, 34, 34, 0.892);
+    --primary-border-color: #fff;
+    --curr-word: #0f172a;
+    --timer: #fff;
+    --second-bg: transparent;
+    --reverse-bg: black;
+    --hover-key: rgb(51, 51, 51);
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -9,6 +35,7 @@ body {
         'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-bg-color);
 }
 
 code {
@@ -56,15 +83,16 @@ ul {
 .btn-theme {
     display: block;
     cursor: pointer;
-    background-color: rgb(252, 191, 77);
+    background-color: var(--bg-button);
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     min-width: 80px;
     padding: 3px;
+    transition: all 0.2s;
 }
 
 .word-current {
-    @apply bg-slate-200 rounded-xl;
+    @apply bg-currWord rounded-xl;
 }
 
 .word--incorrect {
