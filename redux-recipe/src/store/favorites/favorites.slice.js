@@ -12,6 +12,7 @@ const favoritesSlice = createSlice({
         toggleFavorites: (state, action) => {
             const recipe = action.payload;
             const id = recipe.id;
+
             if (state[id]) {
                 delete state[id];
             } else {
